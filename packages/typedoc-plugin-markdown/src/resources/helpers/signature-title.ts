@@ -16,8 +16,9 @@ export default function () {
         md.push(`${memberSymbol(this)} `);
       }
 
-      if (this.parent && this.parent.flags?.length > 0) {
-        md.push(this.parent.flags.map((flag) => `\`${flag}\``).join(' ') + ' ');
+      const flags = this.parent?.flags?.filter((x) => x !== 'Const');
+      if (flags?.length > 0) {
+        md.push(flags.map((flag) => `\`${flag}\``).join(' ') + ' ');
       }
 
       if (accessor) {
