@@ -8,13 +8,6 @@ export default function (theme: MarkdownTheme) {
     'reflectionTitle',
     function (this: PageEvent<any>, shouldEscape = true) {
       const title: string[] = [''];
-      if (
-        this.model &&
-        this.model.kindString &&
-        this.url !== this.project.url
-      ) {
-        title.push(`${this.model.kindString}: `);
-      }
       if (this.url === this.project.url) {
         title.push(theme.indexTitle || this.project.name);
       } else {
