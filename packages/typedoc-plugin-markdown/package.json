@@ -1,6 +1,6 @@
 {
-  "name": "typedoc-plugin-markdown",
-  "version": "3.11.6",
+  "name": "yet-forked-typedoc-plugin-markdown",
+  "version": "3.11.7",
   "description": "A plugin for TypeDoc that enables TypeScript API documentation to be generated in Markdown.",
   "main": "dist/index.js",
   "files": [
@@ -8,7 +8,6 @@
   ],
   "scripts": {
     "lint": "eslint ./src --ext .ts",
-    "prepublishOnly": "yarn run lint && yarn run build && yarn run test",
     "build": "rm -rf dist && tsc && copyfiles --up 1 ./src/**/*.hbs ./dist/",
     "pretest": "yarn run demo:md && markdownlint ./demo/md",
     "test": "jest --colors",
@@ -33,9 +32,7 @@
     "markdown",
     "typescript",
     "documentation",
-    "api",
-    "typedocplugin",
-    "typedoc"
+    "api"
   ],
   "peerDependencies": {
     "typedoc": ">=0.22.0"
