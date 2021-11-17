@@ -10,7 +10,7 @@ export default function () {
   Handlebars.registerHelper(
     'signatureTitle',
     function (this: SignatureReflection, accessor?: string, standalone = true) {
-      const md: string[] = [];
+      const md: string[] = ['<span class="typedoc-signature-prefix"></span>'];
 
       if (standalone) {
         md.push(`${memberSymbol(this)} `);
