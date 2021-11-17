@@ -162,7 +162,7 @@ export class MarkdownTheme extends Theme {
         this.getUrl(reflection.parent, relative) + this.filenameSeparator + url;
     }
 
-    return url.replace(/^_/, '');
+    return url.replace(/^_/, '').toLowerCase();
   }
 
   applyAnchorUrl(reflection: Reflection, container: Reflection) {
